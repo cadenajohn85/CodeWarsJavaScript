@@ -3,10 +3,21 @@
 
 function getMiddle(word)
 {
+    // Original Solution
+
+    // if (word.length % 2 === 0) {
+    //     return word.substring(word.length / 2 - 1, word.length / 2 + 1);
+    // } else {
+    //     return word.substring(word.length / 2 - .5, word.length / 2 + .5);
+    // }
+
+    // Refactor to increase readability by using variable for middle index
+
+    let middleIndex = word.length / 2;
     if (word.length % 2 === 0) {
-        return word.substring(word.length / 2 - 1, word.length / 2 + 1);
+        return word.substring(middleIndex - 1, middleIndex + 1);
     } else {
-        return word.substring(word.length / 2 - .5, word.length / 2 + .5);
+        return word.charAt(middleIndex);
     }
 }
 
